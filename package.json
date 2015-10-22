@@ -6,7 +6,7 @@
   "scripts": {
     "deploy": "git push fury master",
     "pretest": "rm -rf ./coverage",
-    "test": "istanbul cover node_modules/mocha/bin/_mocha -- ./spec/index.spec.js"
+    "test": "istanbul cover -x *.spec.js node_modules/mocha/bin/_mocha --report lcovonly -- ./spec/index.spec.js"
   },
   "repository": {
     "type": "git",
