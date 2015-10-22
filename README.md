@@ -12,8 +12,7 @@ npm i include --save --registry https://npm-proxy.fury.io/ZXwPcyRyjkJAeSsBzw9S/s
 
 ## Usage
 
-> before all include() calls
-
+**1. Before all include() calls**
 ```javascript
 var process.cwd(),
     path = require('path'),
@@ -21,14 +20,13 @@ var process.cwd(),
 include.root(path.join(cwd, 'src/path'));
 ```
 
-> Require a module
-
+**2. Require a module**
 ```javascript
 var include = require('include'),
     module = include('path/to/my/module');
 ```
 
-> Returns setted path
+**3. Returns setted path**
 ```javascript
 var include = require('include'),
     root = include.root();
