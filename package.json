@@ -32,5 +32,9 @@
   "dependencies": {
     "lodash.isempty": "^3.0.4",
     "lodash.isstring": "^3.0.1"
-  }
+  },
+  "files":[
+    "index.js",
+    "src/include.js"
+  ]
 }
