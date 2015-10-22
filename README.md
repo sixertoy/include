@@ -1,6 +1,6 @@
 # A better require NodeJS
 
-[![Gemfury package][gemfury-img]][gemfury-url] [![MIT License][license-img]][license-url]
+[![Gemfury package][gemfury-img]][gemfury-url] [![MIT License][license-img]][license-url] [![status][travis-img]][travis-url] [![coverage][coverall-img]][coverall-url]
 
 > A better require NodeJS
 
