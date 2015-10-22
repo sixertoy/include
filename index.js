@@ -1,5 +1,5 @@
 /*jslint indent: 4, nomen: true, plusplus: true */
-/*globals require, exports, module, process */
+/*globals require, module, process */
 (function () {
 
     'use strict';
@@ -11,9 +11,9 @@
         isstring = require('lodash.isstring');
 
     /* -----------------------------
-     * 
+     *
      * Main
-     * 
+     *
      * ----------------------------- */
 
     module.exports = function (namespace) {
@@ -30,13 +30,13 @@
     };
 
     /* -----------------------------
-     * 
+     *
      * Exposed
-     * 
+     *
      * ----------------------------- */
 
     module.exports.root = function (namespace) {
-        if(arguments.length < 1){
+        if (arguments.length < 1) {
             return _root;
         } else if (!isstring(namespace) || isempty(namespace)) {
             throw new Error('missing arguments');
