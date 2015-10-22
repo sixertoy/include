@@ -41,12 +41,12 @@
         } else if (!isstring(namespace) || isempty(namespace)) {
             throw new Error('missing arguments');
         }
-        var fullpath = path.join(process.cwd(), namespace),
-            exists = fs.statSync(fullpath);
-        if (exists) {
+        try {
+            var fullpath = path.join(process.cwd(), namespace),
+                exists = fs.statSync(fullpath);
             _root = fullpath;
             return _root;
-        } else {
+        } catch (e) {
             throw new Error('invalid path: ' + fullpath);
         }
     };

@@ -49,6 +49,24 @@
             }).to.throw('invalid path: ' + path.join(include.root(), 'mod-toto'));
         });
 
+        it('throws no namespace defined', function () {
+            expect(function(){
+                include();
+            }).to.throw('missing arguments');
+        });
+
+        it('throw not a string', function () {
+            expect(function(){
+                include(1234);
+            }).to.throw('missing arguments');
+        });
+
+        it('throw empty string', function () {
+            expect(function(){
+                include('');
+            }).to.throw('missing arguments');
+        });
+
         it('returns a module', function () {
             var result = include.root('./spec/fixtures'),
                 mod = include('mod');
