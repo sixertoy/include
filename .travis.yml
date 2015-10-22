@@ -7,7 +7,7 @@ branches:
 node_js:
   - "4.2.1"
 before_install:
-  - npm install -g gulp-cli coveralls
+  - npm install -g gulp-cli istanbul coveralls
 script:
   - npm test --verbose
 after_success:
