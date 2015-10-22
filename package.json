@@ -27,13 +27,14 @@
     "gulp": "^3.9.0",
     "gulp-bump": "^1.0.0",
     "gulp-jshint": "^1.11.2",
-    "jshint-stylish": "^2.0.1"
+    "jshint-stylish": "^2.0.1",
+    "mocha": "^2.3.3"
   },
   "dependencies": {
     "lodash.isempty": "^3.0.4",
     "lodash.isstring": "^3.0.1"
   },
-  "files":[
+  "files": [
     "index.js",
     "src/include.js"
   ]
