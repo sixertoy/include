@@ -1,7 +1,7 @@
 # Include
 
 <a href="https://gemfury.com/f/partner">
-<img alt="Private Repository" src="//badge.fury.io/fp/gemfury.svg" />
+<img alt="Private Repository" src="http://gemfury.com/images/badge/light.png" />
 </a>
 
 > A better require NodeJS
