@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "deploy": "git push fury master",
-    "test": "mocha ./spec/index.spec.js"
+    "test": "istanbul cover -x *.spec.js mocha --report lcovonly -- -R spec"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/sixertoy/include#readme",
   "devDependencies": {
-    "chai": "^3.4.0"
+    "chai": "^3.4.0",
+    "gulp": "^3.9.0"
   },
   "dependencies": {
     "lodash.isempty": "^3.0.4",

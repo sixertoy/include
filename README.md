@@ -1,13 +1,6 @@
 # A better require NodeJS
 
-[![Gemfury package][gemfury-img]][gemfury-url]
-
-[![MIT License][license-img]][license-url]
-
-
-<a href="https://gemfury.com/f/partner">
-<img alt="Private Repository" src="http://gemfury.com/images/badge/light.png" />
-</a>
+[![Gemfury package][gemfury-img]][gemfury-url] [![MIT License][license-img]][license-url]
 
 > A better require NodeJS
 

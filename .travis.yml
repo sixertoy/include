@@ -1,0 +1,15 @@
+language: node_js
+env:
+    global: github.com/sixertoy/include.git
+branches:
+  only:
+    - master
+node_js:
+  - "4.2.1"
+before_install:
+  - npm install -g gulp-cli mocha istanbul coveralls
+script:
+  - npm test --verbose
+after_success:
+  - gulp bump
+  - git push fury master
