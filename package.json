@@ -4,7 +4,8 @@
   "description": "A Better require NodeJS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "git push fury master",
+    "test": "mocha ./spec/index.spec.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/sixertoy/include/issues"
   },
-  "homepage": "https://github.com/sixertoy/include#readme"
+  "homepage": "https://github.com/sixertoy/include#readme",
+  "devDependencies": {
+    "chai": "^3.4.0"
+  },
+  "dependencies": {
+    "lodash.isempty": "^3.0.4",
+    "lodash.isstring": "^3.0.1"
+  }
 }

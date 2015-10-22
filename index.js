@@ -5,29 +5,50 @@
     'use strict';
 
     var _root = false,
-        path = require('path');
+        fs = require('fs'),
+        path = require('path'),
+        isempty = require('lodash.isempty'),
+        isstring = require('lodash.isstring');
 
-    /**
+    /* -----------------------------
      * 
+     * Main
      * 
-     * 
-     */
-    exports.path = function () {
-        return _root;
+     * ----------------------------- */
+
+    module.exports = function (namespace) {
+        var fullpath;
+        if (arguments.length < 1 || !isstring(namespace) || isempty(namespace)) {
+            throw new Error('missing arguments');
+        }
+        fullpath = path.join(_root, namespace);
+        try {
+            return require(fullpath);
+        } catch (e) {
+            throw new Error('invalid path: ' + fullpath);
+        }
     };
 
-    /**
+    /* -----------------------------
      * 
+     * Exposed
      * 
-     * 
-     */
-    exports.root = function (path) {
-        var cwd = process.cwd();
-        _root = path.join(cwd, path);
-    };
+     * ----------------------------- */
 
-    module.exports = function (path) {
-        return require(path.join(_root, path));
+    module.exports.root = function (namespace) {
+        if(arguments.length < 1){
+            return _root;
+        } else if (!isstring(namespace) || isempty(namespace)) {
+            throw new Error('missing arguments');
+        }
+        var fullpath = path.join(process.cwd(), namespace),
+            exists = fs.statSync(fullpath);
+        if (exists) {
+            _root = fullpath;
+            return _root;
+        } else {
+            throw new Error('invalid path: ' + fullpath);
+        }
     };
 
 }());
