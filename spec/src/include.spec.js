@@ -8,7 +8,7 @@
     var result,
         path = require('path'),
         expect = require('chai').expect,
-        include = require('./../index');
+        include = require('./../../index');
 
     describe('include', function () {
 
@@ -48,7 +48,6 @@
                 mod = include('mod-toto');
             }).to.throw('invalid path: ' + path.join(include.root(), 'mod-toto'));
         });
-
 
         it('returns a module', function () {
             var result = include.root('./spec/fixtures'),

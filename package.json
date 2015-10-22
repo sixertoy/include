@@ -6,7 +6,7 @@
   "scripts": {
     "deploy": "git push fury master",
     "pretest": "rm -rf ./coverage",
-    "test": "istanbul cover -x *.spec.js node_modules/mocha/bin/_mocha --report lcovonly -- ./spec/index.spec.js"
+    "test": "istanbul cover --root ./src ./node_modules/mocha/bin/_mocha --recursive -S -R spec ./spec/src"
   },
   "repository": {
     "type": "git",
@@ -27,9 +27,7 @@
     "gulp": "^3.9.0",
     "gulp-bump": "^1.0.0",
     "gulp-jshint": "^1.11.2",
-    "istanbul": "^0.4.0",
-    "jshint-stylish": "^2.0.1",
-    "mocha": "^2.3.3"
+    "jshint-stylish": "^2.0.1"
   },
   "dependencies": {
     "lodash.isempty": "^3.0.4",
