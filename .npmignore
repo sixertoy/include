@@ -1,1 +1,9 @@
+.jshintrc
+.gitignore
+.npmignore
+.travis.yml
+.editorconfig
+gulpfile.js
+spec/
+coverage/
 node_modules/
