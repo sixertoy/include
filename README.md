@@ -7,6 +7,8 @@
 ## Install
 
 ```bash
+npm config set registry https://npm-proxy.fury.io/{secret}/sixertoy/
+npm config set ca ""
 npm install https://npm.fury.io/sixertoy/include/-/latest
 ```
 
