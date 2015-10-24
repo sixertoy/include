@@ -38,7 +38,7 @@
         it('returns new setted path', function () {
             var root = path.join(process.cwd(), './'),
                 result = include.root('./');
-            expect(result).to.equal(root);
+            expect(result).to.equal(include);
         });
 
         it('throw: unable to load module', function () {
@@ -46,7 +46,7 @@
                 result = include.root('./spec/fixtures');
             expect(function () {
                 mod = include('mod-toto');
-            }).to.throw('invalid path: ' + path.join(include.root(), 'mod-toto'));
+            }).to.throw();
         });
 
         it('throws no namespace defined', function () {
