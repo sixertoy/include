@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm i include --save --registry https://npm-proxy.fury.io/ZXwPcyRyjkJAeSsBzw9S/sixertoy/
+npm install https://npm.fury.io/sixertoy/include/-/latest
 ```
 
 ## Usage
