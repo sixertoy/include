@@ -25,7 +25,7 @@
         try {
             return require(fullpath);
         } catch (e) {
-            throw new Error('invalid path: ' + fullpath);
+            throw new Error(e.message);
         }
     };
 
@@ -36,16 +36,16 @@
      * ----------------------------- */
 
     module.exports.root = function (namespace) {
+        var exists;
         if (arguments.length < 1) {
             return _root;
         } else if (!isstring(namespace) || isempty(namespace)) {
             throw new Error('missing arguments');
         }
         try {
-            var fullpath = path.join(process.cwd(), namespace),
-                exists = fs.statSync(fullpath);
-            _root = fullpath;
-            return _root;
+            _root = path.join(process.cwd(), namespace),
+            exists = fs.statSync(_root);
+            return module.exports;
         } catch (e) {
             throw new Error('invalid path: ' + fullpath);
         }
