@@ -18,8 +18,7 @@ npm install https://npm.fury.io/sixertoy/include/-/latest
 ```javascript
 var process.cwd(),
     path = require('path'),
-    include = require('include');
-include.root(path.join(cwd, 'src/path'));
+    include = require('include').root(path.join(cwd, 'src/path'));
 ```
 
 **2. Require a module**
@@ -28,10 +27,10 @@ var include = require('include'),
     module = include('path/to/my/module');
 ```
 
-**3. Returns setted path**
+**3. Returns include config**
 ```javascript
 var include = require('include'),
-    root = include.root();
+    debug = include.toString();
 ```
 
 [gemfury-url]: https://gemfury.com/f/partner
