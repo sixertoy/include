@@ -34,6 +34,9 @@
      * Exposed
      *
      * ----------------------------- */
+    module.exports.toString = function(){
+        return '{root: "' + _root + '"}';
+    };
 
     module.exports.root = function (namespace) {
         var exists;

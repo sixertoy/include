@@ -6,6 +6,7 @@
     'use strict';
 
     var result,
+        cwd = process.cwd(),
         path = require('path'),
         expect = require('chai').expect,
         include = require('./../../index');
@@ -50,19 +51,19 @@
         });
 
         it('throws no namespace defined', function () {
-            expect(function(){
+            expect(function () {
                 include();
             }).to.throw('missing arguments');
         });
 
         it('throw not a string', function () {
-            expect(function(){
+            expect(function () {
                 include(1234);
             }).to.throw('missing arguments');
         });
 
         it('throw empty string', function () {
-            expect(function(){
+            expect(function () {
                 include('');
             }).to.throw('missing arguments');
         });
@@ -71,6 +72,11 @@
             var result = include.root('./spec/fixtures'),
                 mod = include('mod');
             expect(mod()).to.equal('Hello world!');
+        });
+
+        it('toString method', function () {
+            var p = path.join(cwd, './spec/fixtures');
+            expect(include.toString()).to.equal('{root: "' + p + '"}');
         });
 
     });
