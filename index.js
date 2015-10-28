@@ -30,12 +30,16 @@
         var mparent = module.parent.filename,
             mpath = path.join(_base_path, namespace),
             mfile = path.join(_absolute_path, namespace + '.js');
+        if(_maps.hasOwnProperty(namespace)){
+            return _maps[namespace];
+        }
         try {
             fs.statSync(mfile);
+            _maps[namespace] = require(mpath);
+            return _maps[namespace];
         } catch (e) {
             throw new Error('Unable to load module: ' + mpath + ' from ' + mparent);
         }
-        return require(mpath);
     };
 
     /* -----------------------------
