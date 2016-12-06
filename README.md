@@ -1,15 +1,13 @@
 # A better require NodeJS
 
-[![Gemfury package][gemfury-img]][gemfury-url] [![MIT License][license-img]][license-url] [![status][travis-img]][travis-url] [![coverage][coverall-img]][coverall-url]
+[![MIT License][license-img]][license-url] [![status][travis-img]][travis-url] [![coverage][coverall-img]][coverall-url]
 
-> A better require NodeJS
+> DO NOT USE IT IN PRODUCTION, USABLE FOR MOCHA's TESTING
 
 ## Install
 
 ```bash
-npm config set registry https://npm-proxy.fury.io/{secret}/sixertoy/
-npm config set ca ""
-npm install https://npm.fury.io/sixertoy/include/-/latest
+npm install https://github.com/sixertoy/include --save-dev
 ```
 
 ## Usage
