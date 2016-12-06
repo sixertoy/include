@@ -7,8 +7,9 @@ branches:
 node_js:
   - "4.2.1"
 before_install:
-  - npm install -g gulp-cli istanbul coveralls
+  - npm install -g eslint istanbul coveralls
 script:
   - npm test --verbose
 after_success:
-  - cat ./coverage/lcov.info | coveralls
+  - cat ./coverage/lcov.info | coveralls && rm -rf ./coverage
+  
